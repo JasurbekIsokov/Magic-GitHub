@@ -73,10 +73,10 @@
 }
 
 .profileimg {
-  width: 230px;
+  width: 200px;
   height: 180px;
   margin: 10px auto;
-  border-radius: 10px;
+  border-radius: 3px;
   margin-top: 30px;
 }
 
@@ -90,6 +90,8 @@
   background-color: rgb(3, 53, 253);
   font-size: 16px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .profile_btn:hover {
