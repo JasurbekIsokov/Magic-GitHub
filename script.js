@@ -121,29 +121,29 @@ function renderHtml(data) {
   section1.insertAdjacentHTML("afterbegin", html);
 }
 
-// function renderHtml2(element) {
-//   let html2 = ` <h2 class="latest_repos">Latest Repos</h2>
-//   <div class="repos">
-//     <p class="repo_name">${element.name}</p>
+function renderHtml2(element) {
+  let html2 = ` <h2 class="latest_repos">Latest Repos</h2>
+  <div class="repos">
+    <p class="repo_name">${element.name}</p>
 
-//     <div class="statistc">
-//       <span class="stars statis"
-//         >Stars:
-//         <p class="paragraph stars_paragraph">${element.stargazers_count}</p
-//       ></span>
-//       <span class="watchers statis"
-//         >Watchers: ${element.watchers}
-//         <p class="paragraph watchers_paragraph"></p
-//       ></span>
-//       <span class="forks statis"
-//         >Forks:${element.forks}
-//         <p class="paragraph forks_paragraph"></p
-//       ></span>
-//     </div>
-//   </div>`;
+    <div class="statistc">
+      <span class="stars statis"
+        >Stars:
+        <p class="paragraph stars_paragraph">${element.stargazers_count}</p
+      ></span>
+      <span class="watchers statis"
+        >Watchers: ${element.watchers}
+        <p class="paragraph watchers_paragraph"></p
+      ></span>
+      <span class="forks statis"
+        >Forks:${element.forks}
+        <p class="paragraph forks_paragraph"></p
+      ></span>
+    </div>
+  </div>`;
 
-//   repoSection.insertAdjacentHTML("afterbegin", html2);
-// }
+  repoSection.insertAdjacentHTML("afterbegin", html2);
+}
 
 // function arrFor(repos) {
 //   repos.forEach((val, key) => {
