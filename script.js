@@ -32,90 +32,94 @@ search.addEventListener("input", function () {
 
 const getCountryAsync = async function () {
   // https://api.github.com/users/defunkt
-  // try {
-  //   const dataJSON = await fetch(
-  //     `https://api.github.com/users/${search.value}?client_id=d487070e8ebeb53eb623&client_secret=f231d73655a740d44c8f87a2e9df95e1fa919385`
-  //   );
-  //   console.log(dataJSON.ok);
-  //   if (!dataJSON.ok) {
-  //     console.log("jkkjg");
-  //     throw new Error(`Username topilmadi...`);
-  //   }
-  //   const data = await dataJSON.json();
-  //   console.log(data);
-  //   const repoJson = await fetch(
-  //     `https://api.github.com/users/${search.value}/repos`
-  //   );
-  //   const repos = await repoJson.json();
-  //   console.log(repos);
-  //   section1.innerHTML = "";
-  //   repoSection.innerHTML = "";
-  //   renderHtml(data);
-  //   arrFor(repos);
-  // } catch (error) {
-  //   return error;
-  // }
+  try {
+    const dataJSON = await fetch(
+      `https://api.github.com/users/${search.value}?client_id=d487070e8ebeb53eb623&client_secret=f231d73655a740d44c8f87a2e9df95e1fa919385`
+    );
+    console.log(dataJSON.ok);
+    if (!dataJSON.ok) {
+      console.log("jkkjg");
+      throw new Error(`Username topilmadi...`);
+    }
+    const data = await dataJSON.json();
+
+    console.log(data);
+
+    const repoJson = await fetch(
+      `https://api.github.com/users/${search.value}/repos`
+    );
+    const repos = await repoJson.json();
+
+    console.log(repos);
+
+    section1.innerHTML = "";
+    repoSection.innerHTML = "";
+    renderHtml(data);
+    arrFor(repos);
+  } catch (error) {
+    return error;
+  }
 };
 
 // // btn.addEventListener('click', getCountryAsync);
 
-// function renderHtml(data) {
-//   let html = `<div class="about">
-//   <div class="about__section1">
-//     <img
-//       src="${data.avatar_url}"
-//       alt="Img profile"
-//       class="profileimg"
-//     />
-//     <a href="${data.html_url}" class="profile_btn">View Profile</a>
-//   </div>
-//   <div class="about__section2">
-//     <div class="about__section2--top">
-//       <span class="public_repos activity"
-//         >Public Repos:
-//         <p class="public_repos-text paragraph">${data.public_repos}</p
-//       ></span>
-//       <span class="publik_gists activity"
-//         >Publik Gists: 12
-//         <p class="publik_gists-text paragraph">${data.public_gists}</p
-//       ></span>
-//       <span class="follower activity"
-//         >Followers:
-//         <p class="followers-text paragraph">${data.followers}</p
-//       ></span>
-//       <span class="following activity"
-//         >Following:
-//         <p class="following-text paragraph">${data.following}</p
-//       ></span>
-//     </div>
-//     <div class="about_section--table">
-//       <table class="mytable">
-//         <span class="company tabletd"
-//           >Company:
-//           <p class="paragraph company_paragraph">${data.company}</p
-//         ></span>
+function renderHtml(data) {
+  let html = `<div class="about">
+  <div class="about__section1">
+    <img
+      src="${data.avatar_url}"
+      alt="Img profile"
+      class="profileimg"
+    />
+    <a href="${data.html_url}" class="profile_btn">View Profile</a>
+  </div>
+  <div class="about__section2">
+    <div class="about__section2--top">
+      <span class="public_repos activity"
+        >Public Repos:
+        <p class="public_repos-text paragraph">${data.public_repos}</p
+      ></span>
+      <span class="publik_gists activity"
+        >Publik Gists: 12
+        <p class="publik_gists-text paragraph">${data.public_gists}</p
+      ></span>
+      <span class="follower activity"
+        >Followers:
+        <p class="followers-text paragraph">${data.followers}</p
+      ></span>
+      <span class="following activity"
+        >Following:
+        <p class="following-text paragraph">${data.following}</p
+      ></span>
+    </div>
+    <div class="about_section--table">
+      <table class="mytable">
+        <span class="company tabletd"
+          >Company:
+          <p class="paragraph company_paragraph">${data.company}</p
+        ></span>
 
-//         <span class="blog tabletd"
-//           >Website/Blog:
-//           <p class="paragraph blog_paragraph">${data.blog}</p
-//         ></span>
+        <span class="blog tabletd"
+          >Website/Blog:
+          <p class="paragraph blog_paragraph">${data.blog}</p
+        ></span>
 
-//         <span class="location tabletd"
-//           >Location:
-//           <p class="paragraph location_paragraph">${data.location}</p
-//         ></span>
+        <span class="location tabletd"
+          >Location:
+          <p class="paragraph location_paragraph">${data.location}</p
+        ></span>
 
-//         <span class="member tabletd"
-//           >Member Since:
-//           <p class="paragraph member_paragraph">${data.created_at}</p
-//         ></span>
-//       </table>
-//     </div>
-//   </div>
-// </div>`;
+        <span class="member tabletd"
+          >Member Since:
+          <p class="paragraph member_paragraph">${data.created_at}</p
+        ></span>
+      </table>
+    </div>
+  </div>
+</div>`;
 
-//   section1.insertAdjacentHTML("afterbegin", html);
-// }
+  section1.insertAdjacentHTML("afterbegin", html);
+}
 
 // function renderHtml2(element) {
 //   let html2 = ` <h2 class="latest_repos">Latest Repos</h2>
