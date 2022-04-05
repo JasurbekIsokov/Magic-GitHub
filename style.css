@@ -49,3 +49,152 @@
   font-size: 18.72px;
   margin-top: 50px;
 }
+
+.about {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.about__section1 {
+  display: grid;
+  grid-template-columns: auto;
+  width: 30%;
+}
+
+.about__section2 {
+  display: grid;
+  grid-template-columns: auto;
+  width: 70%;
+}
+
+.profileimg {
+  width: 230px;
+  height: 180px;
+  margin: 10px auto;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.profile_btn {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 10px auto;
+  border: 1px solid rgb(3, 53, 253);
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(3, 53, 253);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile_btn:hover {
+  background-color: rgb(82, 119, 251);
+  border-color: rgb(82, 119, 251);
+}
+
+.profile_btn:active {
+  transform: scale(1.025);
+}
+
+.activity {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 15px 10px 0px 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.public_repos {
+  background-color: rgb(3, 53, 253);
+}
+
+.publik_gists {
+  background-color: #777;
+}
+
+.follower {
+  background-color: rgb(0, 128, 60);
+}
+
+.following {
+  background-color: rgb(1, 193, 139);
+}
+
+.paragraph {
+  display: inline-block;
+}
+
+.about_section--table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabletd {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 0;
+  border: 1px solid #000;
+  display: block;
+}
+.company,
+.blog,
+.location {
+  border-bottom: none;
+}
+
+.company {
+  margin-top: -40px;
+}
+
+.repos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px 20% 20px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.repo_name {
+  display: inline-block;
+}
+
+.statistc span {
+  display: inline-block;
+}
+
+.statis {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.stars {
+  background-color: rgb(3, 53, 253);
+}
+
+.watchers {
+  background-color: #777;
+}
+
+.forks {
+  background-color: rgb(0, 128, 60);
+}
+
+.latest_repos {
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.repo_name {
+  color: rgb(3, 53, 253);
+  font-size: 18.72px;
+}
