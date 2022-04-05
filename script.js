@@ -30,36 +30,32 @@ search.addEventListener("input", function () {
   getCountryAsync();
 });
 
-// const getCountryAsync = async function () {
-//   // https://api.github.com/users/defunkt
-//   try {
-//     const dataJSON = await fetch(
-//       `https://api.github.com/users/${search.value}?client_id=d487070e8ebeb53eb623&client_secret=f231d73655a740d44c8f87a2e9df95e1fa919385`
-//     );
-//     console.log(dataJSON.ok);
-//     if (!dataJSON.ok) {
-//       console.log("jkkjg");
-//       throw new Error(`Username topilmadi...`);
-//     }
-//     const data = await dataJSON.json();
-
-//     console.log(data);
-
-//     const repoJson = await fetch(
-//       `https://api.github.com/users/${search.value}/repos`
-//     );
-//     const repos = await repoJson.json();
-
-//     console.log(repos);
-
-//     section1.innerHTML = "";
-//     repoSection.innerHTML = "";
-//     renderHtml(data);
-//     arrFor(repos);
-//   } catch (error) {
-//     return error;
-//   }
-// };
+const getCountryAsync = async function () {
+  // https://api.github.com/users/defunkt
+  // try {
+  //   const dataJSON = await fetch(
+  //     `https://api.github.com/users/${search.value}?client_id=d487070e8ebeb53eb623&client_secret=f231d73655a740d44c8f87a2e9df95e1fa919385`
+  //   );
+  //   console.log(dataJSON.ok);
+  //   if (!dataJSON.ok) {
+  //     console.log("jkkjg");
+  //     throw new Error(`Username topilmadi...`);
+  //   }
+  //   const data = await dataJSON.json();
+  //   console.log(data);
+  //   const repoJson = await fetch(
+  //     `https://api.github.com/users/${search.value}/repos`
+  //   );
+  //   const repos = await repoJson.json();
+  //   console.log(repos);
+  //   section1.innerHTML = "";
+  //   repoSection.innerHTML = "";
+  //   renderHtml(data);
+  //   arrFor(repos);
+  // } catch (error) {
+  //   return error;
+  // }
+};
 
 // // btn.addEventListener('click', getCountryAsync);
 
