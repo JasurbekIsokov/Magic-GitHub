@@ -145,9 +145,9 @@ function renderHtml2(element) {
   repoSection.insertAdjacentHTML("afterbegin", html2);
 }
 
-// function arrFor(repos) {
-//   repos.forEach((val, key) => {
-//     renderHtml2(val);
-//     console.log(key);
-//   });
-// }
+function arrFor(repos) {
+  repos.forEach((val, key) => {
+    renderHtml2(val);
+    console.log(key);
+  });
+}
